@@ -6,7 +6,10 @@
 
 <script>
 export default {
-
+    validate(data) {
+        // Regex to ensure only numeric values are accepted.
+        return /^\d+$/.test(data.params.id);
+    }
 }
 </script>
 

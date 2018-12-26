@@ -1,17 +1,26 @@
 <template>
   <section class="container">
     <div>      
-      <nuxt-link to="/blog">Blogs</nuxt-link>
+      <h1><nuxt-link to="/blog">Blogs</nuxt-link></h1>
+      <input type="text" v-model="bid">
+      <button @click="onClick">Load Blog Post</button>
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
+  name: 'home',
+  data() {
+    return {
+      bid: ''
+    }
+  },
+  methods: {
+    onClick() {
+      this.$router.push('/blog/' + this.bid);
+    }
   }
 }
 </script>
