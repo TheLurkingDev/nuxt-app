@@ -21,7 +21,8 @@ export default {
     onClick() {
       this.$router.push('/blog/' + this.bid);
     }
-  }
+  },
+  layout: 'blogs'
 }
 </script>
 
