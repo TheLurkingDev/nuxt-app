@@ -1,5 +1,6 @@
 <template>
   <section class="container">
+    <Caption />
     <div>      
       <h1><nuxt-link to="/blog">Blogs</nuxt-link></h1>
       <input type="text" v-model="bid">
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import Caption from '~/components/Caption.vue';
 
 export default {
   name: 'home',
@@ -22,7 +24,9 @@ export default {
       this.$router.push('/blog/' + this.bid);
     }
   },
-  layout: 'blogs'
+  components: {
+    Caption
+  }
 }
 </script>
 
